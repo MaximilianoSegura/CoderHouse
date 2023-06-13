@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62,5%;
+}
+
+header{
+    /*background-color: rgb(42, 44, 44);*/
+    background-image: url(../imagenes/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra.jpg);
+    background-position: center;
+} 
+.header
+.nav_productos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;}
+
+h2{
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: red;
+
+}
+#h3unico{
+    display: inline;
+    font-size: 3rem
+}
+
+
+.header ul li{
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem ;
+    margin-left: 5rem;
+}
+
+
+a{
+    text-decoration: none;
+    color: rgb(244, 50, 43);
+}
+.centrar{
+    text-align: center;
+}
+.derecha{
+    text-align: right;
+}
+
+
+.section1{
+    margin: 1rem 1rem;
+    background-image: url("../imagenes/maxresdefault.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30rem;
+}
+h1{
+    font-size: 4rem;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: red;
+    text-align: center
+    ;
+
+}
+p{
+    margin: 1rem;
+    text-align: center;
+}
+footer{
+    color: aliceblue;
+    background-color: rgb(42, 44, 44);
+    height: 160px;
+}
+.contact{
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: italic;
+}
+.colorfondo{
+    background-color: rgb(58, 86, 129);
+    color: aliceblue;
+    height: 20rem;
+    font-size: 2rem;
+}
+.styleh2{
+    color: rgb(19, 21, 26);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem;
+}
+.disenop{
+    font-size: 2rem;
+}
+.tamanio{
+    height: 45rem;
+    background-image: url(../imagenes/volumen-resumen-grafico-loneliness-escritorio.jpg);
+    font-size: 2rem;
+    padding: 1rem;
+}
+/* .body{
+    display: grid;
+    grid-template-columns: repeat(2 ,0.5fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: "header header""header header""section2 section2" "footer footer" ;
+} */
