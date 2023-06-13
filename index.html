@@ -15,7 +15,7 @@
 </head>
 <body class="body">
     <header class="header">
-        <nav class="nav_productos">
+        <nav class="nav">
             <img id="arriba" src="imagenes/Polarizados-Córdoba-Logo-Digital-RGB.png" height="200px" width="px" alt="">
             <ul>
             
@@ -31,15 +31,15 @@
     </header>
     
     <main class="section1">
-        <article><h3 id="h3unico">Encontranos!</h3>
-        </article>
+        <div><h3>Encontranos!</h3></div>
+        
         <article> <iframe  width="560" height="315" src="https://www.youtube.com/embed/PneNyCfnysg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </article>
     </main>
     
     <div class="section2">
         <h1>Busacanos por aqui:</h1>
-        <h2 class="centrar">Bv. Las Heras 708</h2>
+        <p class="pmas">Bv. Las Heras 708</p>
             <p>
 
 
@@ -64,23 +64,21 @@
     
     
     
-    <footer class="footer">
-    <h2>Contáctanos</h2>
-    <form class="linea" action="">
-        <label class="linea" for="nombre">Nombre</label>
-        <input  class="linea" type="text" name="nombre" id="nombre" required>
-        <label for="email">Correo electronico </label>
-        <input type="email" name="email" id="email"required>
-        <label for="numero">Numero de telefono</label>
-        <input type="number" name="numero" id="numero">
-        <label for="mensaje">Dejanos tu mensaje</label>
-        <textarea name="mensaje" id="mensaje" cols="30" rows="1"></textarea>
-        <input type="submit" value="Enviar">
-    </form>
-    
-    <a href="#arriba">Volver arriba</a>
-    
-</footer>
+    <footer class="footerlist">
+        <h2>Contáctanos</h2>
+        <form action="">
+            <div><label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required></div>
+            <div><label for="email">Correo electronico </label>
+                <input type="email" name="email" id="email"required></div>
+            <div><label for="numero">Numero de telefono</label>
+                <input type="number" name="numero" id="numero"></div>
+            <div><label for="mensaje">Dejanos tu mensaje</label>
+                <textarea name="mensaje" id="mensaje" cols="30" rows="3"></textarea>
+                <input type="submit" value="Enviar"></div>
+        </form>
+        <a href="#arriba">Volver arriba</a>
+    </footer>
 
 </body>
 </html

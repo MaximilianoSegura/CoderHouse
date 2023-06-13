@@ -11,12 +11,13 @@ header{
     background-image: url(../imagenes/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra.jpg);
     background-position: center;
 } 
-.header
-.nav_productos {
+.nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
-    align-items: center;}
+    justify-content: space-around;
+    align-items: center;
+}
+    
 
 h2{
     font-family: 'Times New Roman', Times, serif;
@@ -24,10 +25,7 @@ h2{
     color: red;
 
 }
-#h3unico{
-    display: inline;
-    font-size: 3rem
-}
+
 
 
 .header ul li{
@@ -35,7 +33,7 @@ h2{
     display: inline-block;
     text-align: center;
     font-size: 2rem ;
-    margin-left: 5rem;
+    margin-left: 2rem;
 }
 
 
@@ -43,24 +41,54 @@ a{
     text-decoration: none;
     color: rgb(244, 50, 43);
 }
-.centrar{
-    text-align: center;
-}
-.derecha{
-    text-align: right;
-}
+
 
 
 .section1{
+    
     margin: 1rem 1rem;
     background-image: url("../imagenes/maxresdefault.jpg");
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
-    height: 30rem;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
 }
+.section1 h3{color: rgb(214, 13, 13);
+    background-color: rgb(255, 255, 255);
+    padding: 3px;
+    border-radius: 15px;
+    font-size: 3rem;
+    
+}
+@media screen and (max-width:945px){
+    .section1{
+        flex-direction: column;
+    }
+}
+@media screen and (max-width:640px){
+    .section1 iframe {
+        padding: 0%;
+        height: auto;
+        width: auto;
+        justify-content:flex-start;
+    }
+    .section1 h3{
+        font-size: 15px;
+    }
+
+
+}
+.section1 article{
+    padding: 2rem;
+
+
+}
+
 h1{
-    font-size: 4rem;
+    font-size: 2rem;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     color: red;
@@ -75,7 +103,7 @@ p{
 footer{
     color: aliceblue;
     background-color: rgb(42, 44, 44);
-    height: 160px;
+    height: auto;
 }
 .contact{
     font-size: 1rem;
@@ -85,8 +113,17 @@ footer{
 .colorfondo{
     background-color: rgb(58, 86, 129);
     color: aliceblue;
-    height: 20rem;
-    font-size: 2rem;
+    height: auto;
+    font-size: 20px;
+    padding: 10px;
+    /* display: flex ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; */
+}
+.pmas{
+    font-size: 25px;
+    color: brown;
 }
 .styleh2{
     color: rgb(19, 21, 26);
@@ -97,14 +134,111 @@ footer{
     font-size: 2rem;
 }
 .tamanio{
-    height: 45rem;
+    height: auto;
     background-image: url(../imagenes/volumen-resumen-grafico-loneliness-escritorio.jpg);
-    font-size: 2rem;
+    font-size: 26px;
     padding: 1rem;
 }
-/* .body{
+.blog{
     display: grid;
-    grid-template-columns: repeat(2 ,0.5fr);
-    grid-template-rows: repeat(4,1fr);
-    grid-template-areas: "header header""header header""section2 section2" "footer footer" ;
-} */
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr  0.4fr;
+    grid-template-areas: "tamanio""colorfondo""footerblog" ;
+}
+.listadoimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.editcards{
+    margin: 10px;
+    padding: 10px;
+}
+@media screen and (max-width:768px) {
+    /* Pagina Listado tablet */
+    .listadoimg img{
+        height: 300px;
+        width: auto;
+        margin: 20px;
+    }
+    .listadoimg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0%;
+        margin: 0%;
+    }
+    .footer {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2px;
+    }
+    .footer div{
+        padding: 3px;
+        margin-left: 2px;
+    }
+    /* Pagina inicio tablet */
+
+}
+@media screen and (max-width:660px){
+    .h1Princ {
+        font-size: large;
+    }
+    .cards{
+        height: auto;
+        width: auto;
+        margin: 5px;
+    }
+    .cards{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .editcards{
+        margin: 0%;
+    }
+    .nav{
+        display: flex;
+        flex-direction: column;
+    }
+    .nav ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 0%;
+        margin: 0%;
+    }
+    .footerlist {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding: 2px;
+    }
+    .footerlist div{
+        padding: 3px;
+        margin-left: 2px;
+    }
+
+}
