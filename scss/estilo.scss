@@ -1,4 +1,5 @@
-/* *{
+$colorpagina: rgb(58, 86, 129);
+*{
     margin: 0;
     padding: 0;
 }
@@ -7,44 +8,39 @@ html{
 }
 
 header{
-    /*background-color: rgb(42, 44, 44);*/
-  /*   background-image: url(../imagenes/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra.jpg);
+    background-image: url(../imagenes/fondo-azul-degradado-lujo-abstracto-azul-oscuro-liso-banner-estudio-vineta-negra.jpg);
     background-position: center;
-}  */ */
-/* .nav {
+    a{
+        text-decoration: none;
+        color: rgb(244, 50, 43);
+    }
+    
+} 
+.nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-} */
+    li{
+        list-style-type: none;
+        display: inline-block;
+        text-align: center;
+        font-size: 2rem ;
+        margin-left: 2rem;
+        & :hover{
+            font-size: 2.5rem;
+        }
+    }
+    }
     
-
-/* h2{
+h2{
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
     color: red;
 
-} */
+}
 
-
-
-/* .header ul li{
-    list-style-type: none;
-    display: inline-block;
-    text-align: center;
-    font-size: 2rem ;
-    margin-left: 2rem;
-} */
-
-
-/* a{
-    text-decoration: none;
-    color: rgb(244, 50, 43);
-} */
-s
-
-
-/* .section1{
+.section1{
     
     margin: 1rem 1rem;
     background-image: url("../imagenes/maxresdefault.jpg");
@@ -55,15 +51,17 @@ s
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-} */
-/* .section1 h3{color: rgb(214, 13, 13);
-    background-color: rgb(255, 255, 255);
-    padding: 3px;
-    border-radius: 15px;
-    font-size: 3rem;
-    
-} */
-/* @media screen and (max-width:945px){
+    h3{color: rgb(214, 13, 13);
+        background-color: rgb(255, 255, 255);
+        padding: 3px;
+        border-radius: 15px;
+        font-size: 3rem;
+    }
+    article{
+        padding: 2rem;
+    }
+}
+@media screen and (max-width:945px){
     .section1{
         flex-direction: column;
     }
@@ -80,14 +78,8 @@ s
     }
 
 
-} */
-/* .section1 article{
-    padding: 2rem;
-
-
-} */
-
-/* h1{
+}
+h1{
     font-size: 2rem;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
@@ -104,54 +96,84 @@ footer{
     color: aliceblue;
     background-color: rgb(42, 44, 44);
     height: auto;
-} */
-/* .contact{
+}
+.contact{
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
-} */
-/* .colorfondo{
-    background-color: rgb(58, 86, 129);
+}
+.colorfondo{
+    background-color:$colorpagina;
     color: aliceblue;
     height: auto;
     font-size: 20px;
-    padding: 10px; */
-    /* display: flex ;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
-/* } */
-/* .pmas{
+    padding: 10px;
+    
+}
+.pmas{
     font-size: 25px;
     color: brown;
-} */
-/* .styleh2{
-    color: rgb(19, 21, 26);
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 3rem;
 }
-.disenop{
-    font-size: 2rem;
+
+@mixin margin($margintop, $marginright)
+{
+    margin-top: $margintop;
+    margin-right:$marginright ;
 }
-.tamanio{
-    height: auto;
+.soporte{
+    
     background-image: url(../imagenes/volumen-resumen-grafico-loneliness-escritorio.jpg);
-    font-size: 26px;
+    font-size: 25px;
     padding: 1rem;
+    min-height: 1000px;
+    
+    h2{
+        color: rgb(19, 21, 26);
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+    }
+    label{
+        @include margin(5px,400px);
+    }
+
 }
+.boton{
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    text-align: center;
+    font-size: 2rem ;
+    margin: 5px;
+    padding: 3px;
+    border-radius: 15px;
+
+}
+.boton--mg{
+    @extend .boton;
+    background-color: rgb(64, 222, 64);
+    color: white
+
+}
+.boton--nomg{
+    @extend .boton;
+    background-color: orangered;
+    color: black;
+}
+
 .blog{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr  0.4fr;
-    grid-template-areas: "tamanio""colorfondo""footerblog" ;
+    background-size: auto;
+    align-content: space-between;
 }
 .listadoimg{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-} */
-/* .cards{
+}
+.cards{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -159,47 +181,48 @@ footer{
 .editcards{
     margin: 10px;
     padding: 10px;
-} */
-/* @media screen and (max-width:768px) { */
+}
+@media screen and (max-width:768px) {
     /* Pagina Listado tablet */
-    /* .listadoimg img{
-        height: 300px;
-        width: auto;
-        margin: 20px;
-    }
     .listadoimg {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        img{
+            height: 300px;
+            width: auto;
+            margin: 20px;
+        }
         
     }
     .nav{
         display: flex;
         flex-direction: column;
-    }
-    .nav ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 0%;
-        margin: 0%;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0%;
+            margin: 0%;
+        }
     }
     .footer {
         display: flex;
         justify-content: center;
         flex-direction: column;
         padding: 2px;
+        div{
+            padding: 3px;
+            margin-left: 2px;
+        }
+        /* Pagina inicio tablet */
     }
-    .footer div{
-        padding: 3px;
-        margin-left: 2px;
-    } */
-    /* Pagina inicio tablet */
+    
 
-/* } */
-/* @media screen and (max-width:660px){
+}
+@media screen and (max-width:660px){
     .h1Princ {
         font-size: large;
     }
@@ -207,13 +230,10 @@ footer{
         height: auto;
         width: auto;
         margin: 5px;
-    }
-    .cards{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
-        
+        align-items: center
     }
     .editcards{
         margin: 0%;
@@ -221,24 +241,24 @@ footer{
     .nav{
         display: flex;
         flex-direction: column;
-    }
-    .nav ul{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding: 0%;
-        margin: 0%;
+        ul{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            padding: 0%;
+            margin: 0%;
+        }
     }
     .footerlist {
         display: flex;
         justify-content: center;
         flex-direction: column;
         padding: 2px;
+        div{
+            padding: 3px;
+            margin-left: 2px;
+        }
     }
-    .footerlist div{
-        padding: 3px;
-        margin-left: 2px;
-    }
-
+    
 }
