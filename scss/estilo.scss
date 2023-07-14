@@ -21,6 +21,10 @@ header{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    ul{
+        display: flex;
+        flex-direction: row;
+    }
     li{
         list-style-type: none;
         display: inline-block;
@@ -28,7 +32,7 @@ header{
         font-size: 2rem ;
         margin-left: 2rem;
         & :hover{
-            font-size: 2.5rem;
+            color: rgb(46, 165, 204);
         }
     }
     }
@@ -41,15 +45,13 @@ h2{
 }
 
 .section1{
-    
-    margin: 1rem 1rem;
-    background-image: url("../imagenes/maxresdefault.jpg");
+    background-image: url("../imagenes/fondo-encontranos.jpg");
     background-position: center;
     background-size: cover;
     
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     h3{color: rgb(214, 13, 13);
         background-color: rgb(255, 255, 255);
@@ -61,10 +63,92 @@ h2{
         padding: 2rem;
     }
 }
-@media screen and (max-width:945px){
+.section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.section3{
+    background-color: rgb(41, 5, 5);
+    display: flex;
+    padding: 10rem 0rem 10rem 0rem;
+    h2{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    p{
+        color: $colorpagina;
+        font-size: 22px;
+        padding-right: 10rem;
+        padding-left: 10rem;
+    }
+    img{
+        height: 20rem;
+        margin: 1rem 3rem 2rem 0rem;
+    }
+}
+.soporte{
+    input, textarea{
+        padding: 2px 15px;
+        border-radius: 25px;
+        background-color: rgb(174, 250, 211);
+        outline: none;
+    }
+}
+@media screen and (max-width:1409px){
+    footer{
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+
+        ul{
+            display: flex;
+            img{
+                width: 70px;
+            }
+        }
+    }
+    
+    .linea {
+        display: flex;
+        
+        flex-direction: column;
+        padding: 2px;
+        max-width: 700px;
+        
+        input, textarea{
+            margin-bottom: 5px;
+        }
+        
+    }
+}
+@media screen and (max-width:1100px){
     .section1{
         flex-direction: column;
     }
+    .section3{
+        img{
+            margin: 2px;
+        }
+        p{
+            padding: 0%;
+        }
+    }
+    .divpadre{
+    flex-direction: column;
+    }
+    .hijodiv{
+        margin:1rem 0 1rem 0 ;
+    }
+    .soporte{
+        textarea{
+            width: 300px;
+        }
+    }
+    
 }
 @media screen and (max-width:640px){
     .section1 iframe {
@@ -96,11 +180,61 @@ footer{
     color: aliceblue;
     background-color: rgb(42, 44, 44);
     height: auto;
+    a{
+        padding-right: 10px;
+    }
 }
 .contact{
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: flex-start;
     font-size: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-style: italic;
+    background-image:url(../imagenes/fondo-geometrico_53876-115941.avif) ;
+    background-position: center;
+    background-size: cover;
+    height: 1000px;
+    h2{
+        color: rgb(255, 10, 10);
+        font-weight: 900;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+    h3{
+        font-weight: 1000;
+    }
+}
+.redes{
+    ul{
+        padding: 0%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        img{
+            width: 50px;
+        }
+    }
+    li {
+        list-style-type: none;
+        padding: 1rem;
+        & :hover{
+            width: 60px;
+        }
+    }
+}
+.wasap{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    a{
+        text-decoration: none;
+    }
+    a :hover{
+        width: 80px;
+        
+    }
 }
 .colorfondo{
     background-color:$colorpagina;
@@ -110,9 +244,19 @@ footer{
     padding: 10px;
     
 }
+.divpadre{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $colorpagina;
+    padding: 1rem;
+}
+.hijodiv :hover{
+    background-color: rgb(27, 196, 238);
+}
 .pmas{
     font-size: 25px;
-    color: brown;
+    color: rgb(127, 37, 37);
 }
 
 @mixin margin($margintop, $marginright)
@@ -121,19 +265,20 @@ footer{
     margin-right:$marginright ;
 }
 .soporte{
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-image: url(../imagenes/volumen-resumen-grafico-loneliness-escritorio.jpg);
     font-size: 25px;
     padding: 1rem;
     min-height: 1000px;
-    
     h2{
         color: rgb(19, 21, 26);
         font-family: Arial, Helvetica, sans-serif;
-        font-size: 3rem;
+        font-size: 2rem;
     }
     label{
-        @include margin(5px,400px);
+        display: block;
     }
 
 }
@@ -172,6 +317,14 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url(../imagenes/volumen-resumen-grafico-loneliness-escritorio.jpg);
+    background-position: center;
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 900;
+        color: black;
+        text-decoration: underline;
+    }
 }
 .cards{
     display: flex;
@@ -207,8 +360,21 @@ footer{
             padding: 0%;
             margin: 0%;
         }
+        li{
+            margin: 0;
+        }
     }
-    .footer {
+    .section3{
+        flex-direction: column;
+        align-items: center;
+        img{
+            max-width: 380px;
+        }
+        p{
+            padding: 0%;
+        }
+    }
+    footer {
         display: flex;
         justify-content: center;
         flex-direction: column;
@@ -250,15 +416,46 @@ footer{
             margin: 0%;
         }
     }
-    .footerlist {
+    
+    
+    }
+    .formsoporte{
+        background-color: $colorpagina;
+        min-height: 500px;
         display: flex;
+        align-items: center;
         justify-content: center;
         flex-direction: column;
-        padding: 2px;
+        padding-bottom: 25px;
         div{
-            padding: 3px;
-            margin-left: 2px;
+            background-color: rgb(254, 254, 254);
+        padding: 50px 55px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        border-radius: 20px;
+        text-align: center;
+        width: 340px;
+        }
+        h2{
+            color: black;
+            font-weight: 900;
+        }
+        input, textarea{
+            padding: 10px 15px;
+            border-radius: 25px;
+            background-color: rgb(194, 201, 245);
+            outline: none;
+        }
+        label{
+            font-weight: 600;
+        }
+    }
+    .linea{
+        input, textarea{
+            padding: 2px 15px;
+            border-radius: 25px;
+            background-color: rgb(246, 222, 222);
+            outline: none;
         }
     }
     
-}
+
